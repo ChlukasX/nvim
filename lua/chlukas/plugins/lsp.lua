@@ -1,5 +1,7 @@
 return {
-    "neovim/nvim-lspconfig",
-    opt = function()
-    end,
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
+        end,
+    }
 }
