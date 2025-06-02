@@ -1,7 +1,9 @@
 vim.opt.guicursor = ""
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
+
+-- needed for obsidian
+vim.opt.conceallevel = 1
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
