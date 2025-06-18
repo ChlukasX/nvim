@@ -20,6 +20,13 @@ return {
                 name = "development",
                 path = "~/Documents/Development/",
             },
+            {
+                name = "kasten",
+                path = "~/Documents/kasten/",
+            },
+        },
+        templates = {
+            folder = "templates"
         },
         ui = {
             enable = true,
