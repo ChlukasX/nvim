@@ -11,7 +11,8 @@ return {
             ensure_installed = { 
                 "lua_ls",
                 "gopls",
-                "tinymist"
+                "tinymist",
+                "jdtls"
             },
         },
         dependencies = {
@@ -33,6 +34,9 @@ return {
             })
             lspconfig.tinymist.setup({
                 capabilites = capabilities
+            })
+            lspconfig.jdtls.setup({
+                capabilities = capabilities
             })
 
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})

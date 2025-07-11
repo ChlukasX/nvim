@@ -4,7 +4,7 @@ return {
         build = ":TSUpdate",
         config = function()
             require'nvim-treesitter.configs'.setup {
-              ensure_installed = { "c", "go", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "typst" },
+              ensure_installed = { "c", "go", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "typst", "java" },
               auto_install = false,
               indent = { enable = true },
               highlight = {
