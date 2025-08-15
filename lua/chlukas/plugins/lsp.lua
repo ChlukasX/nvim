@@ -38,22 +38,18 @@ return {
     },
     {
         "neovim/nvim-lspconfig",
-        config = function()
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+        dependencies = {
+            "saghen/blink.cmp",
+        },
+        opts = {
+            servers = {
+                lua_ls = {},
+            },
+        },
+        config = function(_, opts)
+            local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-            local lspconfig = require("lspconfig")
-            lspconfig.lua_ls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.gopls.setup({
-                capabilites = capabilities,
-            })
-            lspconfig.tinymist.setup({
-                capabilites = capabilities,
-            })
-            lspconfig.jdtls.setup({
-                capabilities = capabilities,
-            })
+            require("lspconfig").lua_ls.setup({ capabilities = capabilities })
 
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "gr", vim.lsp.buf.references, {})

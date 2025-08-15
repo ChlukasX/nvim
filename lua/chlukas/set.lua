@@ -41,7 +41,3 @@ vim.api.nvim_command [[au VimEnter,WinEnter,BufWinEnter * set guicursor=n-v-c:bl
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
--- DISABLES NETRW FOR NOW
--- vim.g.loaded_netrw = 1
--- vim.g.loaded_netrwPlugin = 1
-
