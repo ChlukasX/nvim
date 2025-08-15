@@ -15,6 +15,10 @@ return {
                 lua = { "stylua" },
                 javascript = { "prettier" },
                 typescript = { "prettier" },
+                javascriptreact = { "prettier" },
+                typescriptreact = { "prettier" },
+                json = { "prettier" },
+                java = { "google-java-format" },
             },
             formatters = {
                 prettier = {
