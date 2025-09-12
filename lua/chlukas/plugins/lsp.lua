@@ -28,6 +28,7 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "gopls",
+                "ts_ls",
                 "tinymist",
                 "jdtls",
             },
@@ -45,12 +46,14 @@ return {
         opts = {
             servers = {
                 lua_ls = {},
+                ts_ls = {},
             },
         },
         config = function(_, opts)
             local capabilities = require("blink.cmp").get_lsp_capabilities()
 
             require("lspconfig").lua_ls.setup({ capabilities = capabilities })
+            require("lspconfig").ts_ls.setup({ capabilities = capabilities })
 
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
