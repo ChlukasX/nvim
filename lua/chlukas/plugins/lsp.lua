@@ -31,6 +31,7 @@ return {
                 "ts_ls",
                 "tinymist",
                 "jdtls",
+                "pylsp",
             },
         },
         dependencies = {
