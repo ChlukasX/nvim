@@ -53,8 +53,11 @@ return {
         config = function(_, opts)
             local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-            require("lspconfig").lua_ls.setup({ capabilities = capabilities })
-            require("lspconfig").ts_ls.setup({ capabilities = capabilities })
+            vim.lsp.config("*", {
+                capabilities = capabilities,
+            })
+            --vim.lsp.config("lspconfig").lua_ls.setup({ capabilities = capabilities })
+            --require("lspconfig").ts_ls.setup({ capabilities = capabilities })
 
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
