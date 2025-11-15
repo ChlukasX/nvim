@@ -9,7 +9,7 @@ return {
                     "vimdoc", "query", "markdown", 
                     "markdown_inline", "typst", "java",
                     "javascript", "typescript", "http",
-                    "python",
+                    "python", "jsonc",
                 },
               auto_install = false,
               indent = { enable = true },

@@ -23,15 +23,20 @@ return {
             formatters = {
                 prettier = {
                     prepend_args = {
-                        "--use-tabs", "false",
-                        "--tab-width", "4",
-                        "--indent-size", "4",
+                        "--use-tabs",
+                        "false",
+                        "--tab-width",
+                        "4",
+                        "--indent-size",
+                        "4",
                     },
                 },
                 stylua = {
                     prepend_args = {
-                        "--indent-type", "Spaces",
-                        "--indent-width", "4",
+                        "--indent-type",
+                        "Spaces",
+                        "--indent-width",
+                        "4",
                     },
                 },
             },
